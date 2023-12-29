@@ -14,5 +14,5 @@ func _ready():
 func _process(delta):
 	#var totalChar = get_percent_visible()
 	#if (get_percent_visible() < 100):
-		visibleChar += speed * delta 		
-		set_visible_characters(visibleChar)
+	visibleChar += speed * delta 		
+	set_visible_characters(visibleChar)

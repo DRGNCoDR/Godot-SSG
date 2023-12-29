@@ -19,11 +19,6 @@ func _physics_process(delta):
 	get_input()
 	move_and_slide()
 
-#func checkPause():
-	#if(Input.is_action_just_pressed("Pause")):
-		#PauseMenu()
-	#
-
 func PauseMenu():
 	if paused:
 		Pause.hide()
@@ -44,7 +39,3 @@ func AnimatePlayer():
 		playerSprite.frame = 4
 	if Input.is_action_pressed("FireSuperWeapon"):
 		playerSprite.frame = 5
-
-
-func _on_area_2d_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
-	pass # Replace with function body.

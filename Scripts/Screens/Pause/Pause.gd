@@ -5,6 +5,5 @@ extends Node
 func _on_continue_pressed():
 	main.PauseMenu()
 
-
 func _on_quit_pressed():
 	get_tree().quit()

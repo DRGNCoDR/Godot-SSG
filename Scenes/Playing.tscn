@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://cjtda658v1yn2"]
 
-[ext_resource type="Script" path="res://Scenes/Playing.gd" id="1_7oq6h"]
+[ext_resource type="Script" path="res://Scripts/Screens/Playing/Playing.gd" id="1_7oq6h"]
 [ext_resource type="Texture2D" uid="uid://8uew44l0bb1d" path="res://Assets/3_Playing/BACKGROUND/stars0.png" id="1_lscnd"]
 [ext_resource type="Texture2D" uid="uid://6k5uk4pikvyn" path="res://Assets/3_Playing/HUD/images.jpg" id="2_85llj"]
 [ext_resource type="Script" path="res://Scripts/Screens/Playing/ParallaxBackground.gd" id="2_re183"]
@@ -13,10 +13,10 @@
 [ext_resource type="Texture2D" uid="uid://b6oi2u8di52hr" path="res://Assets/3_Playing/PLAYER/silversurfer.png" id="8_7cxo1"]
 [ext_resource type="Script" path="res://Scripts/Screens/Playing/PlayerMove.gd" id="9_3wjdv"]
 [ext_resource type="Texture2D" uid="uid://blt1ci358uovy" path="res://Assets/3_Playing/EFFECTS/effects.png" id="12_hpwie"]
-[ext_resource type="Script" path="res://Scripts/Screens/Playing/ParallaxBackgroundForward.gd" id="12_xf84s"]
-[ext_resource type="Script" path="res://Scripts/Screens/Playing/GalactusWeapon.gd" id="14_ci0rl"]
+[ext_resource type="Script" path="res://Scripts/HUD.gd" id="13_82tnx"]
 [ext_resource type="FontFile" uid="uid://bdsdtywi0gio7" path="res://Assets/Font/Sony_Sketch.ttf" id="15_5fktm"]
 [ext_resource type="PackedScene" uid="uid://cl44cqsw2f3sc" path="res://Scenes/Pause.tscn" id="15_akwxd"]
+[ext_resource type="Script" path="res://Scenes/EnemySpawner.gd" id="17_0lo3a"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3rdhn"]
 size = Vector2(99, 38)
@@ -28,10 +28,10 @@ size = Vector2(1258.25, 17)
 size = Vector2(79, 441)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e4xim"]
-radius = 21.0
-height = 72.0
+radius = 16.0
+height = 62.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_32x4a"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lyu5g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fs76n"]
 size = Vector2(61, 65)
@@ -61,7 +61,7 @@ motion_mirroring = Vector2(1126, 0)
 
 [node name="Stars0" type="Sprite2D" parent="Paralax Items/ReverseParalax/Background"]
 self_modulate = Color(1, 1, 1.12, 1)
-position = Vector2(573.625, 329)
+position = Vector2(574, 329)
 scale = Vector2(1.06027, 1.13095)
 texture = ExtResource("1_lscnd")
 
@@ -74,6 +74,7 @@ position = Vector2(246, 415)
 scale = Vector2(1.20175, 1.3095)
 texture = ExtResource("5_h3ddj")
 script = ExtResource("5_mhdwu")
+xPos = -300
 
 [node name="Foreground" type="ParallaxLayer" parent="Paralax Items/ReverseParalax"]
 motion_scale = Vector2(1.3, 1.3)
@@ -87,8 +88,9 @@ texture = ExtResource("6_03am0")
 
 [node name="ForwardParalax" type="ParallaxBackground" parent="Paralax Items"]
 scroll_offset = Vector2(1, 0)
-script = ExtResource("12_xf84s")
-speed = 250
+script = ExtResource("2_re183")
+speed = 70
+forwardDirection = true
 
 [node name="Galactus Weapon" type="ParallaxLayer" parent="Paralax Items/ForwardParalax"]
 light_mask = 2
@@ -116,7 +118,9 @@ scale = Vector2(1.87382, 1.78609)
 texture = ExtResource("12_hpwie")
 hframes = 10
 vframes = 8
-script = ExtResource("14_ci0rl")
+script = ExtResource("5_mhdwu")
+xPos = 2000
+isWeapon = true
 
 [node name="PlayAreaBounds" type="Node2D" parent="."]
 position = Vector2(24, 115)
@@ -161,7 +165,10 @@ vframes = 2
 frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("RectangleShape2D_32x4a")
+position = Vector2(-4, -4)
+shape = SubResource("RectangleShape2D_lyu5g")
+
+[node name="Node2D" type="Node2D" parent="Player"]
 
 [node name="Enemies" type="Node2D" parent="."]
 position = Vector2(1071, 315)
@@ -179,6 +186,7 @@ texture = ExtResource("7_6na2p")
 
 [node name="HUD" type="Node2D" parent="."]
 position = Vector2(1071, 315)
+script = ExtResource("13_82tnx")
 
 [node name="Images" type="Sprite2D" parent="HUD"]
 position = Vector2(-1016, -268)
@@ -287,5 +295,14 @@ environment = SubResource("Environment_4xsfa")
 
 [node name="Pause" parent="." instance=ExtResource("15_akwxd")]
 visible = false
+
+[node name="EnemySpawner" type="Node2D" parent="."]
+script = ExtResource("17_0lo3a")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="EnemySpawner"]
+offset_left = 1121.0
+offset_top = 130.0
+offset_right = 1161.0
+offset_bottom = 510.0
 
 [connection signal="area_entered" from="Paralax Items/ForwardParalax/Galactus Weapon/GWeapArea2D" to="." method="_on_area_2d_area_entered"]
