@@ -11,9 +11,9 @@ config_version=5
 [application]
 
 config/name="SSG_2023"
-run/main_scene="res://Scenes/Home.tscn"
+run/main_scene="res://Components/Enemy.tscn"
 config/features=PackedStringArray("4.2", "C#", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Assets/3_Playing/WEAPONS/playerWeap2.png"
 
 [autoload]
 

@@ -1,8 +1,7 @@
 extends Node
-@export  var screenName = ""
 
-func _changeScene():	
-	Global.goto_scene("res://Scenes/" + screenName)
-	
-func _quitGame():
+func ChangeSceneTo(fileName):
+	Global.goto_scene("res://Scenes/" + fileName)
+
+func QuitGame():
 	get_tree().quit()	

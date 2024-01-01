@@ -14,7 +14,6 @@ func get_input():
 	AnimatePlayer()	
 	velocity = input_direction * speed
 	
-
 func _physics_process(delta):
 	get_input()
 	move_and_slide()
