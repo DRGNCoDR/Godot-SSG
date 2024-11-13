@@ -17,7 +17,7 @@ func goto_scene(path):	# This function will usually be called from a signal call
 func _deferred_goto_scene(path):
 	# It is now safe to remove the current scene.
 	current_scene.free()
-	print(path)
+	#print(path)
 	# Load the new scene.
 	var s = ResourceLoader.load(path)
 

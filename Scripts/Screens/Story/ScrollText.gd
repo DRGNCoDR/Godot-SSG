@@ -11,8 +11,6 @@ func _ready():
 	visibleChar = 0
 
  # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
- 	#var totalChar = get_percent_visible()
- 	#if (get_percent_visible() < 100):
+func _process(delta): 	
 	visibleChar += speed * delta 		
 	set_visible_characters(visibleChar)

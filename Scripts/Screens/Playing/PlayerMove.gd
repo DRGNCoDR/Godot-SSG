@@ -1,32 +1,17 @@
 extends CharacterBody2D
 @export var speed = 400
-var paused = false
-
 @onready var playerSprite = $PlayerArea2D/Silversurfer
-@onready var Pause = $"../Pause"
 
 func get_input():
 	var input_direction = Input.get_vector("Left","Right","Up", "Down")
-	#check if we need to pause	
-	if Input.is_action_just_pressed("Pause"):
-		PauseMenu()
 	
 	AnimatePlayer()	
+	
 	velocity = input_direction * speed
 	
-func _physics_process(delta):
+func _physics_process(_delta):
 	get_input()
 	move_and_slide()
-
-func PauseMenu():
-	if paused:
-		Pause.hide()
-		Engine.time_scale = 1
-	else:
-		Pause.show()
-		Engine.time_scale = 0
-		
-	paused = !paused
 
 func AnimatePlayer():
 	playerSprite.frame = 0 #default

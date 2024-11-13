@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://blwsv0ly8m2ye"]
+
+[ext_resource type="Texture2D" uid="uid://uwlrt2hr2isg" path="res://Assets/3_Playing/ENEMIES/Enemy1.png" id="1_j8pag"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fs76n"]
+size = Vector2(63, 65)
+
+[node name="Enemies" type="Node2D"]
+position = Vector2(57, 53)
+
+[node name="EnemyArea2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyArea2D"]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_fs76n")
+
+[node name="Enemy1" type="Sprite2D" parent="EnemyArea2D"]
+texture = ExtResource("1_j8pag")
