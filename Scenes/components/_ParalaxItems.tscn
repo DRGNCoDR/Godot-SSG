@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjh7odwsijmdh"]
+
+[ext_resource type="Script" path="res://assets/scripts/component/ParallaxBackground.gd" id="1_fgm3e"]
+[ext_resource type="Texture2D" uid="uid://cow07x7qnljf" path="res://assets/img/ENEMIES/Boss/galactus_sprite.PNG" id="2_tqdkt"]
+[ext_resource type="Script" path="res://assets/scripts/component/Galactus.gd" id="3_bd5og"]
+[ext_resource type="Texture2D" uid="uid://bx2ij4s1s2qhh" path="res://assets/img/FOREGROUND/alienmoon.png" id="4_ji5nq"]
+[ext_resource type="Texture2D" uid="uid://blt1ci358uovy" path="res://assets/img/EFFECTS/effects.png" id="5_vfh38"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odyeh"]
+size = Vector2(99, 38)
+
+[node name="Paralax Items" type="Node2D"]
+top_level = true
+
+[node name="ReverseParalax" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(-1, 0)
+script = ExtResource("1_fgm3e")
+speed = -200
+
+[node name="Midground" type="ParallaxLayer" parent="ReverseParalax"]
+motion_scale = Vector2(-1, -1)
+
+[node name="GalactusSprite" type="Sprite2D" parent="ReverseParalax/Midground"]
+self_modulate = Color(1.183, 1.775, 2.367, 1)
+position = Vector2(246, 415)
+scale = Vector2(1.20175, 1.3095)
+texture = ExtResource("2_tqdkt")
+script = ExtResource("3_bd5og")
+xPos = -300
+
+[node name="Foreground" type="ParallaxLayer" parent="ReverseParalax"]
+top_level = true
+motion_scale = Vector2(-1, -1)
+motion_offset = Vector2(-4, 0)
+motion_mirroring = Vector2(1125, 0)
+
+[node name="Alienmoon" type="Sprite2D" parent="ReverseParalax/Foreground"]
+position = Vector2(580, 575)
+scale = Vector2(1.15234, 0.75)
+texture = ExtResource("4_ji5nq")
+
+[node name="ForwardParalax" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2(1, 0)
+script = ExtResource("1_fgm3e")
+speed = 100
+forwardDirection = true
+
+[node name="Galactus Weapon" type="ParallaxLayer" parent="ForwardParalax"]
+top_level = true
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-155, 332)
+motion_scale = Vector2(1, 0)
+
+[node name="GWeapArea2D" type="Area2D" parent="ForwardParalax/Galactus Weapon"]
+light_mask = 2
+visibility_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ForwardParalax/Galactus Weapon/GWeapArea2D"]
+light_mask = 2
+visibility_layer = 2
+position = Vector2(10, -4)
+shape = SubResource("RectangleShape2D_odyeh")
+
+[node name="Effects" type="Sprite2D" parent="ForwardParalax/Galactus Weapon/GWeapArea2D"]
+self_modulate = Color(1.183, 1.183, 0, 1)
+light_mask = 2
+visibility_layer = 2
+position = Vector2(-1.88989, -1.5546)
+rotation = -3.14159
+scale = Vector2(1.87382, 1.78609)
+texture = ExtResource("5_vfh38")
+hframes = 10
+vframes = 8
+script = ExtResource("3_bd5og")
+xPos = 3000
+isWeapon = true
