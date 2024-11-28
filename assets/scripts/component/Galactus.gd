@@ -1,5 +1,5 @@
 extends Sprite2D
-@export var xPos = 0
+@export var xPos = -1000
 @export var isWeapon = false
 func _process(_delta):
 	

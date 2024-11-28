@@ -1,43 +1,18 @@
-[gd_scene load_steps=10 format=3 uid="uid://hra536sqcets"]
+[gd_scene load_steps=7 format=3 uid="uid://hra536sqcets"]
 
 [ext_resource type="Script" path="res://assets/scripts/playing.gd" id="1_7pxmb"]
 [ext_resource type="PackedScene" uid="uid://bjh7odwsijmdh" path="res://scenes/components/_ParalaxItems.tscn" id="1_meju1"]
-[ext_resource type="Texture2D" uid="uid://d1c2grj8sy3xd" path="res://assets/img/earth-icon-vector-art.png" id="2_1kb4m"]
 [ext_resource type="PackedScene" uid="uid://c3e30mhhuqlo4" path="res://scenes/components/player.tscn" id="2_cmdn0"]
 [ext_resource type="PackedScene" uid="uid://degbt4bgncc06" path="res://scenes/components/playAreaBounds.tscn" id="3_73o77"]
 [ext_resource type="PackedScene" uid="uid://co8v2i7g234ui" path="res://scenes/components/HUD.tscn" id="4_2w7eo"]
 [ext_resource type="PackedScene" uid="uid://blwsv0ly8m2ye" path="res://scenes/components/enemies.tscn" id="5_wqvm1"]
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_wflxs"]
-lifetime_randomness = 0.14
-particle_flag_disable_z = true
-emission_shape_scale = Vector3(5, 95, 1)
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-inherit_velocity_ratio = 2.0
-direction = Vector3(-10, 0, 0)
-spread = 16.686
-gravity = Vector3(-6, 0, 0)
-scale_min = 0.5
-scale_max = 2.0
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lvdx4"]
-lifetime_randomness = 0.14
-particle_flag_disable_z = true
-emission_shape_scale = Vector3(5, 80, 1)
-emission_shape = 3
-emission_box_extents = Vector3(1, 1, 1)
-inherit_velocity_ratio = 0.2
-direction = Vector3(-1, 0, 0)
-spread = 16.686
-gravity = Vector3(-1, 0, 0)
-scale_min = 0.1
 
 [node name="Playing" type="Node2D"]
 position = Vector2(0, -9)
 script = ExtResource("1_7pxmb")
 
 [node name="Player" parent="." instance=ExtResource("2_cmdn0")]
+z_index = 10
 position = Vector2(567, 282)
 
 [node name="PlayAreaBounds2" parent="." instance=ExtResource("3_73o77")]
@@ -48,29 +23,7 @@ top_level = true
 position = Vector2(21, 30)
 
 [node name="Enemies" parent="." instance=ExtResource("5_wqvm1")]
+z_index = 10
 position = Vector2(1051, 242)
 
 [node name="Paralax Items" parent="." instance=ExtResource("1_meju1")]
-
-[node name="Particles stars" type="GPUParticles2D" parent="."]
-show_behind_parent = true
-position = Vector2(1162, 358)
-scale = Vector2(0.360207, 2.74362)
-amount = 1400
-process_material = SubResource("ParticleProcessMaterial_wflxs")
-lifetime = 36.97
-preprocess = 6.36
-speed_scale = 6.18
-visibility_rect = Rect2(-100, -100, 140, 180)
-
-[node name="Planets" type="GPUParticles2D" parent="."]
-show_behind_parent = true
-position = Vector2(1162, 350)
-scale = Vector2(0.360207, 2.74362)
-amount = 2
-process_material = SubResource("ParticleProcessMaterial_lvdx4")
-texture = ExtResource("2_1kb4m")
-lifetime = 140.0
-preprocess = 6.36
-speed_scale = 6.18
-visibility_rect = Rect2(-100, -100, 140, 180)

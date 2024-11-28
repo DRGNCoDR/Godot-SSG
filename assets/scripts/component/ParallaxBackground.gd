@@ -12,3 +12,4 @@ func scrollBackground(delta, useForwardX):
   scroll_offset.x += speed * delta 
  else:
   scroll_offset.x -= speed * delta
+  
