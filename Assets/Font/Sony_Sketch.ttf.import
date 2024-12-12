@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bdsdtywi0gio7"
-path="res://.godot/imported/Sony_Sketch.ttf-eb8622b0482e010ce74c5dd3c34c2cd8.fontdata"
+path="res://.godot/imported/Sony_Sketch.ttf-36f86d2d51c5725a6e8202e6db8560de.fontdata"
 
 [deps]
 
-source_file="res://Assets/Font/Sony_Sketch.ttf"
-dest_files=["res://.godot/imported/Sony_Sketch.ttf-eb8622b0482e010ce74c5dd3c34c2cd8.fontdata"]
+source_file="res://assets/Font/Sony_Sketch.ttf"
+dest_files=["res://.godot/imported/Sony_Sketch.ttf-36f86d2d51c5725a6e8202e6db8560de.fontdata"]
 
 [params]
 

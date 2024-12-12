@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btmjtpigf75r"
-path="res://.godot/imported/biometal_various_sheet.png-a8aed8876e88dae6559bf8c2251bfa89.ctex"
+path="res://.godot/imported/biometal_various_sheet.png-60d151bba0824f6154949b3366530461.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Playing/ENEMIES/biometal_various_sheet.png"
-dest_files=["res://.godot/imported/biometal_various_sheet.png-a8aed8876e88dae6559bf8c2251bfa89.ctex"]
+source_file="res://assets/3_Playing/ENEMIES/biometal_various_sheet.png"
+dest_files=["res://.godot/imported/biometal_various_sheet.png-60d151bba0824f6154949b3366530461.ctex"]
 
 [params]
 

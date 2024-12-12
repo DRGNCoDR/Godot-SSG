@@ -6,9 +6,8 @@ var playerMaxHP = 100;
 @export var max_eneies = 3;
 @export var curr_spawned_enemies = 1;
 
-func setPlayerHPMP(valueHP :int,valueMP :int):
+func setPlayerHPMP(valueHP :int):
 	playerHP += valueHP
-	playerMP += playerMP
 	
 	playerHPBarLength = float(playerHP) / playerMaxHP 
 	

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4ce80crnwtsv"
-path="res://.godot/imported/Thanos.png-ef7051c2e7a2987887913480e1c9e13e.ctex"
+path="res://.godot/imported/Thanos.png-7d79bcddebe39ada2ca153c67983fe5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Playing/ENEMIES/Boss/Thanos.png"
-dest_files=["res://.godot/imported/Thanos.png-ef7051c2e7a2987887913480e1c9e13e.ctex"]
+source_file="res://assets/3_Playing/ENEMIES/Boss/Thanos.png"
+dest_files=["res://.godot/imported/Thanos.png-7d79bcddebe39ada2ca153c67983fe5e.ctex"]
 
 [params]
 

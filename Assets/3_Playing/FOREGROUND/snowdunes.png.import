@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p5yf68nnsnoe"
-path="res://.godot/imported/snowdunes.png-9f9d125e283313de3932c39805814a97.ctex"
+path="res://.godot/imported/snowdunes.png-0729bdce22cd35941c2e6ae192359463.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Playing/FOREGROUND/snowdunes.png"
-dest_files=["res://.godot/imported/snowdunes.png-9f9d125e283313de3932c39805814a97.ctex"]
+source_file="res://assets/3_Playing/FOREGROUND/snowdunes.png"
+dest_files=["res://.godot/imported/snowdunes.png-0729bdce22cd35941c2e6ae192359463.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6oi2u8di52hr"
-path="res://.godot/imported/silversurfer.png-a9cafdd56406ca4e105336178016d8c9.ctex"
+path="res://.godot/imported/silversurfer.png-38cd123174e9695d5e3be8ed4819372f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Playing/PLAYER/silversurfer.png"
-dest_files=["res://.godot/imported/silversurfer.png-a9cafdd56406ca4e105336178016d8c9.ctex"]
+source_file="res://assets/3_Playing/PLAYER/silversurfer.png"
+dest_files=["res://.godot/imported/silversurfer.png-38cd123174e9695d5e3be8ed4819372f.ctex"]
 
 [params]
 

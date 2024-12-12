@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d36756tf61tdv"
-path="res://.godot/imported/Distant planet.png-b28b7b2d50950c356478bae828a7892a.ctex"
+path="res://.godot/imported/Distant planet.png-76b1467638d7c7cfd910cd9d2c5feed6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Playing/BACKGROUND/Distant planet.png"
-dest_files=["res://.godot/imported/Distant planet.png-b28b7b2d50950c356478bae828a7892a.ctex"]
+source_file="res://assets/3_Playing/BACKGROUND/Distant planet.png"
+dest_files=["res://.godot/imported/Distant planet.png-76b1467638d7c7cfd910cd9d2c5feed6.ctex"]
 
 [params]
 

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SSG_2023"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://Scenes/Home.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://assets/img/WEAPONS/playerWeap2.png"
 

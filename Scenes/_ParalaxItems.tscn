@@ -1,11 +1,38 @@
-[gd_scene load_steps=8 format=3 uid="uid://bjh7odwsijmdh"]
+[gd_scene load_steps=13 format=3 uid="uid://bjh7odwsijmdh"]
 
 [ext_resource type="Script" path="res://Scripts/Screens/Playing/ParallaxBackground.gd" id="1_ju8sc"]
-[ext_resource type="Texture2D" uid="uid://8uew44l0bb1d" path="res://Assets/3_Playing/BACKGROUND/stars0.png" id="2_jcjol"]
-[ext_resource type="Texture2D" uid="uid://cow07x7qnljf" path="res://Assets/3_Playing/ENEMIES/Boss/galactus_sprite.PNG" id="3_5q4x6"]
+[ext_resource type="Texture2D" uid="uid://d1c2grj8sy3xd" path="res://assets/3_Playing/BACKGROUND/earth-icon-vector-art.png" id="1_qqi13"]
+[ext_resource type="Texture2D" uid="uid://lii21dg1aeet" path="res://assets/3_Playing/BACKGROUND/b_background.png" id="2_8xk53"]
+[ext_resource type="Texture2D" uid="uid://8uew44l0bb1d" path="res://assets/3_Playing/BACKGROUND/stars0.png" id="2_jcjol"]
+[ext_resource type="Texture2D" uid="uid://cow07x7qnljf" path="res://assets/3_Playing/ENEMIES/Boss/galactus_sprite.PNG" id="3_5q4x6"]
 [ext_resource type="Script" path="res://Scripts/Screens/Playing/Galactus.gd" id="4_xyew3"]
-[ext_resource type="Texture2D" uid="uid://bx2ij4s1s2qhh" path="res://Assets/3_Playing/FOREGROUND/alienmoon.png" id="5_ehcv1"]
-[ext_resource type="Texture2D" uid="uid://blt1ci358uovy" path="res://Assets/3_Playing/EFFECTS/effects.png" id="6_ggn2o"]
+[ext_resource type="Texture2D" uid="uid://bx2ij4s1s2qhh" path="res://assets/3_Playing/FOREGROUND/alienmoon.png" id="5_ehcv1"]
+[ext_resource type="Texture2D" uid="uid://blt1ci358uovy" path="res://assets/3_Playing/EFFECTS/effects.png" id="6_ggn2o"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_iq861"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 360, 1)
+gravity = Vector3(-20, 0, 0)
+scale_min = 0.5
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_jl60w"]
+lifetime_randomness = 1.0
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 360, 1)
+gravity = Vector3(-20, 0, 0)
+scale_min = 0.8
+scale_max = 1.5
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4pdvi"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(1, 360, 1)
+gravity = Vector3(-20, 0, 0)
+scale_min = 0.2
+scale_max = 0.8
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_odyeh"]
 size = Vector2(99, 38)
@@ -23,11 +50,10 @@ motion_scale = Vector2(-1, -1)
 motion_offset = Vector2(-400, 0)
 motion_mirroring = Vector2(1126, 0)
 
-[node name="Stars0" type="Sprite2D" parent="ReverseParalax/Background"]
-self_modulate = Color(1, 1, 1.12, 1)
-position = Vector2(574, 329)
-scale = Vector2(1.06027, 1.13095)
-texture = ExtResource("2_jcjol")
+[node name="BBackground" type="Sprite2D" parent="ReverseParalax/Background"]
+position = Vector2(401, 339)
+scale = Vector2(43.8627, 17.5187)
+texture = ExtResource("2_8xk53")
 
 [node name="Midground" type="ParallaxLayer" parent="ReverseParalax"]
 motion_scale = Vector2(-1, -1)
@@ -45,9 +71,38 @@ motion_offset = Vector2(-4, 0)
 motion_mirroring = Vector2(1125, 0)
 
 [node name="Alienmoon" type="Sprite2D" parent="ReverseParalax/Foreground"]
+z_index = 100
 position = Vector2(580, 575)
 scale = Vector2(1.15234, 0.75)
 texture = ExtResource("5_ehcv1")
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="ReverseParalax"]
+show_behind_parent = true
+position = Vector2(1332, 334)
+amount = 1000
+process_material = SubResource("ParticleProcessMaterial_iq861")
+lifetime = 50.0
+preprocess = 140.0
+visibility_rect = Rect2(-1329.38, -301.307, 1460, 690.418)
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="ReverseParalax"]
+show_behind_parent = true
+position = Vector2(1332, 334)
+amount = 1500
+process_material = SubResource("ParticleProcessMaterial_jl60w")
+lifetime = 50.0
+preprocess = 140.0
+visibility_rect = Rect2(-1329.38, -301.307, 1460, 690.418)
+
+[node name="DistantPlanets" type="GPUParticles2D" parent="ReverseParalax"]
+show_behind_parent = true
+position = Vector2(1332, 334)
+amount = 5
+process_material = SubResource("ParticleProcessMaterial_4pdvi")
+texture = ExtResource("1_qqi13")
+lifetime = 50.0
+preprocess = 140.0
+visibility_rect = Rect2(-1329.38, -301.307, 1460, 690.418)
 
 [node name="ForwardParalax" type="ParallaxBackground" parent="."]
 scroll_offset = Vector2(1, 0)
@@ -83,3 +138,10 @@ hframes = 10
 vframes = 8
 script = ExtResource("4_xyew3")
 isWeapon = true
+
+[node name="Stars0" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(1, 1, 1.12, 1)
+position = Vector2(574, 329)
+scale = Vector2(1.06027, 1.13095)
+texture = ExtResource("2_jcjol")

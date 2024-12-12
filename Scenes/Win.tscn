@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://e5sa4wwqgfcu"]
 
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_j7yef"]
-[ext_resource type="Texture2D" uid="uid://cnllr5c7l5qhd" path="res://Assets/5_Win/Win.png" id="1_w8no4"]
+[ext_resource type="Texture2D" uid="uid://cnllr5c7l5qhd" path="res://assets/5_Win/Win.png" id="1_w8no4"]
 
 [sub_resource type="Image" id="Image_as6u4"]
 data = {

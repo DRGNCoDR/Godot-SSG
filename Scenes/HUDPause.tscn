@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://cnrnr1dr6t87l"]
 
-[ext_resource type="Texture2D" uid="uid://6k5uk4pikvyn" path="res://Assets/3_Playing/HUD/images.jpg" id="1_c3iwt"]
-[ext_resource type="Texture2D" uid="uid://dwpc5i3ntg8rk" path="res://Assets/3_Playing/HUD/HealthBarBacking.png" id="2_xtwks"]
-[ext_resource type="Texture2D" uid="uid://pysnhk874tjw" path="res://Assets/3_Playing/HUD/ManaBarBacking.png" id="3_x1g55"]
-[ext_resource type="FontFile" uid="uid://bdsdtywi0gio7" path="res://Assets/Font/Sony_Sketch.ttf" id="4_qccnw"]
+[ext_resource type="Texture2D" uid="uid://6k5uk4pikvyn" path="res://assets/3_Playing/HUD/images.jpg" id="1_c3iwt"]
+[ext_resource type="Texture2D" uid="uid://dwpc5i3ntg8rk" path="res://assets/3_Playing/HUD/HealthBarBacking.png" id="2_xtwks"]
+[ext_resource type="Texture2D" uid="uid://pysnhk874tjw" path="res://assets/3_Playing/HUD/ManaBarBacking.png" id="3_x1g55"]
+[ext_resource type="FontFile" uid="uid://bdsdtywi0gio7" path="res://assets/Font/Sony_Sketch.ttf" id="4_qccnw"]
 
 [node name="HUD" type="Node2D"]
 position = Vector2(16, 16)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byt4cur6koypp"
-path="res://.godot/imported/dunescape.png-0a40b0be413e9f498920659a3f1154f1.ctex"
+path="res://.godot/imported/dunescape.png-ad012578b9c4b9c35b2ff2ec8d0dd7df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Playing/FOREGROUND/dunescape.png"
-dest_files=["res://.godot/imported/dunescape.png-0a40b0be413e9f498920659a3f1154f1.ctex"]
+source_file="res://assets/3_Playing/FOREGROUND/dunescape.png"
+dest_files=["res://.godot/imported/dunescape.png-ad012578b9c4b9c35b2ff2ec8d0dd7df.ctex"]
 
 [params]
 

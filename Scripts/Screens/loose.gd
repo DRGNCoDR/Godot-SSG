@@ -9,4 +9,4 @@ func _process(_delta: float) -> void:
 	updateScoreValue()
 	
 func updateScoreValue():
-	$Score_value.text = str(HudValues.score)
+	$scoreValue.text = str(HudValues.score)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://pysnhk874tjw"
-path="res://.godot/imported/ManaBarBacking.png-943d9e2fcd8e9fb09c530357375992a1.ctex"
+path="res://.godot/imported/ManaBarBacking.png-0ff3070b3f117d9a74546d7fb5e81350.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Playing/HUD/ManaBarBacking.png"
-dest_files=["res://.godot/imported/ManaBarBacking.png-943d9e2fcd8e9fb09c530357375992a1.ctex"]
+source_file="res://assets/3_Playing/HUD/ManaBarBacking.png"
+dest_files=["res://.godot/imported/ManaBarBacking.png-0ff3070b3f117d9a74546d7fb5e81350.ctex"]
 
 [params]
 

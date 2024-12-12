@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=4 uid="uid://bo5obn8w8e1ff"]
 
-[ext_resource type="Texture2D" uid="uid://8xc4xyju5c4" path="res://Assets/0_MainMenu/Menu-Bak.png" id="1_shi4j"]
+[ext_resource type="Texture2D" uid="uid://8xc4xyju5c4" path="res://assets/0_MainMenu/Menu-Bak.png" id="1_shi4j"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="2_wg8dc"]
-[ext_resource type="VideoStream" path="res://Assets/0_MainMenu/Video/Silver Surfer The Animated Series Intro.ogv" id="3_y3347"]
+[ext_resource type="VideoStream" path="res://assets/0_MainMenu/Video/Silver Surfer The Animated Series Intro.ogv" id="3_y3347"]
 
 [sub_resource type="Image" id="Image_rlvf6"]
 data = {

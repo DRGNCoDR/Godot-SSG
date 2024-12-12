@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brcl06618o1oc"
-path="res://.godot/imported/rockpeaks.png-31f4b0c11903f64998d93390555e0825.ctex"
+path="res://.godot/imported/rockpeaks.png-8656a0e8f65ca5a284481649517c223a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Playing/FOREGROUND/rockpeaks.png"
-dest_files=["res://.godot/imported/rockpeaks.png-31f4b0c11903f64998d93390555e0825.ctex"]
+source_file="res://assets/3_Playing/FOREGROUND/rockpeaks.png"
+dest_files=["res://.godot/imported/rockpeaks.png-8656a0e8f65ca5a284481649517c223a.ctex"]
 
 [params]
 

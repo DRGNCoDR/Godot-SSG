@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cow07x7qnljf"
-path="res://.godot/imported/galactus_sprite.PNG-9b9c5d41f98c1c83d2d29e752176499b.ctex"
+path="res://.godot/imported/galactus_sprite.PNG-ba2afad1b1cb0de223bad2a47ea483ee.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Playing/ENEMIES/Boss/galactus_sprite.PNG"
-dest_files=["res://.godot/imported/galactus_sprite.PNG-9b9c5d41f98c1c83d2d29e752176499b.ctex"]
+source_file="res://assets/3_Playing/ENEMIES/Boss/galactus_sprite.PNG"
+dest_files=["res://.godot/imported/galactus_sprite.PNG-ba2afad1b1cb0de223bad2a47ea483ee.ctex"]
 
 [params]
 

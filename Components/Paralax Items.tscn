@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://eklb6ljvbf2h"]
 
-[ext_resource type="Texture2D" uid="uid://8uew44l0bb1d" path="res://Assets/3_Playing/BACKGROUND/stars0.png" id="2_gvsva"]
-[ext_resource type="Texture2D" uid="uid://cow07x7qnljf" path="res://Assets/3_Playing/ENEMIES/Boss/galactus_sprite.PNG" id="3_57j8f"]
-[ext_resource type="Texture2D" uid="uid://bx2ij4s1s2qhh" path="res://Assets/3_Playing/FOREGROUND/alienmoon.png" id="5_2hils"]
+[ext_resource type="Texture2D" uid="uid://8uew44l0bb1d" path="res://assets/3_Playing/BACKGROUND/stars0.png" id="2_gvsva"]
+[ext_resource type="Texture2D" uid="uid://cow07x7qnljf" path="res://assets/3_Playing/ENEMIES/Boss/galactus_sprite.PNG" id="3_57j8f"]
+[ext_resource type="Texture2D" uid="uid://bx2ij4s1s2qhh" path="res://assets/3_Playing/FOREGROUND/alienmoon.png" id="5_2hils"]
 
 [node name="ParalaxItems" type="Node2D"]
 

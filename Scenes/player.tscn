@@ -1,14 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3e30mhhuqlo4"]
 
 [ext_resource type="Script" path="res://Scripts/Screens/Playing/PlayerMove.gd" id="1_lgfr3"]
-[ext_resource type="Texture2D" uid="uid://b6oi2u8di52hr" path="res://Assets/3_Playing/PLAYER/silversurfer.png" id="2_o5rj4"]
+[ext_resource type="Texture2D" uid="uid://b6oi2u8di52hr" path="res://assets/3_Playing/PLAYER/silversurfer.png" id="2_o5rj4"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_e4xim"]
 radius = 16.0
 height = 62.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lyu5g"]
-size = Vector2(109.371, 12.9005)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(630, 323)
@@ -22,8 +21,7 @@ script = ExtResource("1_lgfr3")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerArea2D"]
 light_mask = 3
 visibility_layer = 3
-position = Vector2(-2, -7)
-scale = Vector2(1.44266, 1)
+position = Vector2(-5, 1)
 shape = SubResource("CapsuleShape2D_e4xim")
 
 [node name="Silversurfer" type="Sprite2D" parent="PlayerArea2D"]
@@ -36,8 +34,7 @@ vframes = 2
 frame = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 28)
-rotation = 0.0802851
+position = Vector2(-4, -4)
 shape = SubResource("RectangleShape2D_lyu5g")
 
 [node name="Node2D" type="Node2D" parent="."]

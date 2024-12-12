@@ -17,11 +17,11 @@ func _process(_delta: float):
 		
 
 #player collide with enemy
-func _on_enemy_area_2d_body_entered(body: Node2D) -> void:
+func _on_enemy_area_2d_body_entered(_body: Node2D) -> void:
 	queue_free()	
 	
 	HudValues.setHUDEnemiesRemain(-1)
 	HudValues.setHUDScore(-10)
 	HudValues.setHUDMultiplier(1)
 	
-	PlayerVariables.setPlayerHPMP(-35, 0)
+	PlayerVariables.setPlayerHPMP(-35)

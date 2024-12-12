@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d1c2grj8sy3xd"
-path="res://.godot/imported/earth-icon-vector-art.png-9e0682d0f068f065130f2fb9955f9ef2.ctex"
+path="res://.godot/imported/earth-icon-vector-art.png-45bd59677e2cdba601d2293d74b4aa6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/3_Playing/BACKGROUND/earth-icon-vector-art.png"
-dest_files=["res://.godot/imported/earth-icon-vector-art.png-9e0682d0f068f065130f2fb9955f9ef2.ctex"]
+source_file="res://assets/3_Playing/BACKGROUND/earth-icon-vector-art.png"
+dest_files=["res://.godot/imported/earth-icon-vector-art.png-45bd59677e2cdba601d2293d74b4aa6a.ctex"]
 
 [params]
 
