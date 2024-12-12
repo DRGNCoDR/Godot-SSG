@@ -1,13 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://cl44cqsw2f3sc"]
 
-[ext_resource type="Texture2D" uid="uid://ninsvbaxm4rd" path="res://assets/img/Pause.png" id="1_1asth"]
-[ext_resource type="Script" path="res://assets/scripts/Pause.gd" id="1_d4yuj"]
-[ext_resource type="FontFile" uid="uid://bdsdtywi0gio7" path="res://assets/Sony_Sketch.ttf" id="2_8atm1"]
-[ext_resource type="PackedScene" uid="uid://cnrnr1dr6t87l" path="res://scenes/components/HUDPause.tscn" id="4_2qrnu"]
+[ext_resource type="Texture2D" uid="uid://ninsvbaxm4rd" path="res://Assets/4_Pause/Pause.png" id="1_1asth"]
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_xykax"]
+[ext_resource type="FontFile" uid="uid://bdsdtywi0gio7" path="res://Assets/Font/Sony_Sketch.ttf" id="2_8atm1"]
+[ext_resource type="PackedScene" uid="uid://cnrnr1dr6t87l" path="res://Scenes/HUDPause.tscn" id="4_2qrnu"]
 
 [node name="Pause" type="Node2D"]
 process_mode = 2
-script = ExtResource("1_d4yuj")
+script = ExtResource("1_xykax")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(574.75, 332.5)
@@ -54,6 +54,7 @@ theme_override_fonts/font = ExtResource("2_8atm1")
 text = "Quit"
 
 [node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_xykax")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer Bottom/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer Bottom/Quit" to="." method="QuitGame"]
