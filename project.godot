@@ -19,6 +19,7 @@ config/icon="res://Assets/3_Playing/WEAPONS/playerWeap2.png"
 
 Global="*res://global.gd"
 PlayerVariables="*res://player_variables.gd"
+HudValues="*res://hud_values.gd"
 
 [dotnet]
 

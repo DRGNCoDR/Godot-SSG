@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=4 uid="uid://b48vicy82e38f"]
+[gd_scene load_steps=9 format=4 uid="uid://b48vicy82e38f"]
 
+[ext_resource type="Script" path="res://Scripts/Screens/loose.gd" id="1_0bh5k"]
 [ext_resource type="Texture2D" uid="uid://dqfgyq86vrykc" path="res://Assets/6_Loose/Game Over .png" id="1_1dver"]
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_b6ejw"]
 [ext_resource type="Texture2D" uid="uid://bpp4u3su08t0s" path="res://Assets/6_Loose/Game Over.jpg" id="2_fip16"]
@@ -184,6 +185,7 @@ cache/0/25/0/kerning_overrides/45/0 = Vector2(0, 0)
 cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
 
 [node name="Loose" type="Node"]
+script = ExtResource("1_0bh5k")
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("1_b6ejw")
@@ -195,28 +197,46 @@ scale = Vector2(3.23003, 2.37234)
 texture = ExtResource("1_1dver")
 
 [node name="GameOver2" type="Sprite2D" parent="."]
-position = Vector2(386.584, 212.5)
-scale = Vector2(1.11452, 0.486577)
+position = Vector2(574.751, 322)
+scale = Vector2(1.65214, 0.731543)
 texture = ExtResource("2_fip16")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 172.0
-offset_top = 11.0
-offset_right = 437.0
-offset_bottom = 118.0
+offset_left = 486.0
+offset_top = 15.0
+offset_right = 751.0
+offset_bottom = 122.0
 theme_override_fonts/normal_font = ExtResource("3_mam7e")
 theme_override_font_sizes/normal_font_size = 50
 text = "GAME OVER"
 
 [node name="Exit" type="LinkButton" parent="."]
-offset_left = 671.333
-offset_top = 370.0
-offset_right = 743.333
-offset_bottom = 423.0
+offset_left = 1020.0
+offset_top = 573.0
+offset_right = 1092.0
+offset_bottom = 626.0
 theme_override_colors/font_color = Color(0.937255, 0, 0.262745, 1)
 theme_override_fonts/font = SubResource("FontFile_swsgf")
 theme_override_font_sizes/font_size = 45
 text = "Exit"
 underline = 1
+
+[node name="Score_" type="RichTextLabel" parent="."]
+offset_left = 61.0
+offset_top = 127.0
+offset_right = 191.0
+offset_bottom = 191.0
+theme_override_fonts/normal_font = ExtResource("3_mam7e")
+theme_override_font_sizes/normal_font_size = 50
+text = "Score:"
+
+[node name="Score_value" type="RichTextLabel" parent="."]
+offset_left = 207.0
+offset_top = 129.0
+offset_right = 337.0
+offset_bottom = 193.0
+theme_override_fonts/normal_font = ExtResource("3_mam7e")
+theme_override_font_sizes/normal_font_size = 50
+text = "0"
 
 [connection signal="pressed" from="Exit" to="GameManager" method="QuitGame"]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://co8v2i7g234ui"]
+[gd_scene load_steps=6 format=3 uid="uid://co8v2i7g234ui"]
 
+[ext_resource type="Script" path="res://Scripts/Screens/hud.gd" id="1_bxnnd"]
 [ext_resource type="Texture2D" uid="uid://6k5uk4pikvyn" path="res://Assets/3_Playing/HUD/images.jpg" id="1_uor8n"]
 [ext_resource type="Texture2D" uid="uid://dwpc5i3ntg8rk" path="res://Assets/3_Playing/HUD/HealthBarBacking.png" id="2_c20jj"]
 [ext_resource type="Texture2D" uid="uid://pysnhk874tjw" path="res://Assets/3_Playing/HUD/ManaBarBacking.png" id="3_0kc86"]
@@ -7,6 +8,7 @@
 
 [node name="HUD" type="Node2D"]
 position = Vector2(16, 8)
+script = ExtResource("1_bxnnd")
 
 [node name="Images" type="Sprite2D" parent="."]
 position = Vector2(34.75, 29)
