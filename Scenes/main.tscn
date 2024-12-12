@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://b2j3jaeqme428"]
+
+[ext_resource type="Texture2D" uid="uid://vpnuu53vevde" path="res://assets/img/Menu-Bak.png" id="1_5puso"]
+[ext_resource type="Script" path="res://assets/scripts/main.gd" id="1_n2c7j"]
+[ext_resource type="VideoStream" path="res://assets/video/SSG-splash.ogv" id="2_qcnu5"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_n2c7j")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.12695, 0.84375)
+texture = ExtResource("1_5puso")
+
+[node name="main-video" type="VideoStreamPlayer" parent="."]
+top_level = true
+offset_right = 1156.0
+offset_bottom = 648.0
+size_flags_vertical = 3
+stream = ExtResource("2_qcnu5")
+autoplay = true
+expand = true
+buffering_msec = 10
+
+[node name="btn-exit" type="Button" parent="."]
+top_level = true
+offset_left = 1075.0
+offset_top = 606.0
+offset_right = 1144.0
+offset_bottom = 643.0
+theme_override_colors/font_color = Color(0.975297, 0.337178, 0.346489, 1)
+text = "Exit"
+
+[node name="btn-options" type="Button" parent="."]
+top_level = true
+offset_left = 116.0
+offset_top = 607.0
+offset_right = 186.0
+offset_bottom = 644.0
+text = "Options"
+
+[node name="btn-play" type="Button" parent="."]
+top_level = true
+offset_left = 13.0
+offset_top = 607.0
+offset_right = 83.0
+offset_bottom = 644.0
+text = "Play"
+
+[connection signal="pressed" from="btn-exit" to="." method="QuitGame"]

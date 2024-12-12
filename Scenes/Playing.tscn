@@ -1,42 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://cjtda658v1yn2"]
+[gd_scene load_steps=7 format=3 uid="uid://hra536sqcets"]
 
-[ext_resource type="Script" path="res://Scripts/Screens/Playing/Playing.gd" id="1_8eg45"]
-[ext_resource type="Texture2D" uid="uid://lii21dg1aeet" path="res://Assets/3_Playing/BACKGROUND/b_background.png" id="1_jfypj"]
-[ext_resource type="Texture2D" uid="uid://d1c2grj8sy3xd" path="res://Assets/3_Playing/BACKGROUND/earth-icon-vector-art.png" id="2_m33u1"]
-[ext_resource type="PackedScene" uid="uid://wlbrg0le7vec" path="res://Scenes/play_area_bounds.tscn" id="3_hgeu0"]
-[ext_resource type="PackedScene" uid="uid://c3e30mhhuqlo4" path="res://Scenes/player.tscn" id="4_swcj1"]
-[ext_resource type="PackedScene" uid="uid://blwsv0ly8m2ye" path="res://Scenes/enemies.tscn" id="5_47ayj"]
-[ext_resource type="PackedScene" uid="uid://co8v2i7g234ui" path="res://Scenes/HUD.tscn" id="6_0slir"]
-[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="8_c1n6c"]
-[ext_resource type="PackedScene" uid="uid://cl44cqsw2f3sc" path="res://Scenes/Pause.tscn" id="9_fm4pc"]
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_um7ao"]
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(1, 360, 1)
-gravity = Vector3(-20, 0, 0)
-scale_min = 0.2
-scale_max = 0.8
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4srch"]
-lifetime_randomness = 1.0
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(1, 360, 1)
-gravity = Vector3(-20, 0, 0)
-scale_min = 0.5
-
-[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_k3qjf"]
-lifetime_randomness = 1.0
-particle_flag_disable_z = true
-emission_shape = 3
-emission_box_extents = Vector3(1, 360, 1)
-gravity = Vector3(-20, 0, 0)
-scale_min = 0.8
-scale_max = 1.5
+[ext_resource type="Script" path="res://assets/scripts/playing.gd" id="1_7pxmb"]
+[ext_resource type="PackedScene" uid="uid://bjh7odwsijmdh" path="res://scenes/components/_ParalaxItems.tscn" id="1_meju1"]
+[ext_resource type="PackedScene" uid="uid://c3e30mhhuqlo4" path="res://scenes/components/player.tscn" id="2_cmdn0"]
+[ext_resource type="PackedScene" uid="uid://degbt4bgncc06" path="res://scenes/components/playAreaBounds.tscn" id="3_73o77"]
+[ext_resource type="PackedScene" uid="uid://co8v2i7g234ui" path="res://scenes/components/HUD.tscn" id="4_2w7eo"]
+[ext_resource type="PackedScene" uid="uid://blwsv0ly8m2ye" path="res://scenes/components/enemies.tscn" id="5_wqvm1"]
 
 [node name="Playing" type="Node2D"]
-script = ExtResource("1_8eg45")
+position = Vector2(0, -9)
+script = ExtResource("1_7pxmb")
 
 [node name="BBackground" type="Sprite2D" parent="."]
 light_mask = 524288
@@ -76,7 +49,7 @@ lifetime = 50.0
 preprocess = 140.0
 visibility_rect = Rect2(-1329.38, -301.307, 1460, 690.418)
 
-[node name="HUD" parent="." instance=ExtResource("6_0slir")]
+[node name="Paralax Items" parent="." instance=ExtResource("1_meju1")]
 
 [node name="PlayAreaBounds" parent="." instance=ExtResource("3_hgeu0")]
 visible = true
